@@ -4,9 +4,9 @@
 
 0. ```windows - install node.msi & yarn.msi```
 
-1. ```yarn remove -g gulp```
+1. ```yarn global remove gulp```
 
-2. ```yarn add -g gulp-cli```
+2. ```yarn global add gulp-cli```
 
 3. ```git clone project```
 
