@@ -1,6 +1,4 @@
-## Gorelov Sergey
-
-> gulp 4.0. 
+### home-work2
 
 #### Для начала работы
 
@@ -17,9 +15,3 @@
 5. ```yarn ```
 
 6. ```gulp ```
-
-#### добавлено
-
-```tasks/copy.font.js```  > gulp copy:font
-
-```tasks/sprite.png.js```  > gulp sprite:png
