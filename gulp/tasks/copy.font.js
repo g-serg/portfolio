@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function() {
-  var from = $.config.src + '/fonts/*.*',
+  var from = $.config.src + '/fonts/**/*.*',
     to = $.config.root + '/assets/fonts',
     task = 'copy:font';
 
