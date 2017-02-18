@@ -4,7 +4,8 @@ module.exports = function() {
   $.gulp.task('serve', function() {
     $.browserSync.init({
       open: false,
-      server: $.config.root
+      server: $.config.root,
+      files: "*"
     });
 
     $.browserSync.watch([$.config.root + '/**/*.*', '!**/*.css'], $.browserSync.reload);
