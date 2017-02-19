@@ -26,8 +26,11 @@
     "jquery": "~3.1.1"
   },
   "dependencies": {
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-size": "^2.1.0",
     "gulp.spritesmith": "^6.3.0",
     "merge-stream": "^1.0.1",
-    "normalize.css": "~5.0.0"
+    "normalize.css": "~5.0.0",
+    "pug-include-glob": "^0.3.2"
   }
 }
