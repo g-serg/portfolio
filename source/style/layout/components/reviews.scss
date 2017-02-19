@@ -1,0 +1,67 @@
+
+.reviews_wrap {
+  background: url("../images/water.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.reviews__head {
+  height: 205px;
+}
+
+.reviews__hero-photo {
+  width: 80px;
+  display: inline-block;
+  height: 80px;
+  vertical-align: middle;
+}
+
+.reviews__decor {
+  width: 32px;
+  margin-bottom: 18px;
+}
+
+.reviews__content {
+  width: 68%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'robotoregular', sans-serif;
+  color: $black;
+  line-height: 26px;
+  margin-top: 6px;
+}
+
+.reviews__text {
+  margin-bottom: 18px;
+}
+
+.reviews__item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.reviews__hero {
+  position: relative;
+  color: $green;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+
+  &-post {
+    line-height: 24px;
+  }
+}
+
+.reviews__hero-text {
+  position: relative;
+  margin: 17px 0 0 20px;
+}
+
+.reviews__hero-name {
+  font-family: 'robotobold', sans-serif;
+  line-height: 24px;
+}
+
+

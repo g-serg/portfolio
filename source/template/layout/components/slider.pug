@@ -1,0 +1,69 @@
+mixin slider()
+    -
+        var works = [
+            'work-1.png',
+            'work-2.png',
+            'work-3.png',
+            'work-4.png'
+        ];
+
+    .slider
+        .slider-desc
+            ul.slider-desc__list
+                li.slider_desc__item
+                    .slider_desc__head Сайт школы онлайн образования
+                    .slider_desc__techno html , css, javascript
+                    .slider_desc__show
+                        a.slider-desc__link(href="#")
+                            i.fa.fa-link(aria-hidden="true")
+                            span Посмотреть сайт
+        .slider-wrap
+            .slider-top
+                ul.slider-top__list
+                    each work in works
+                        -
+                            var className = 'slider-top__item';
+                            work === 'work-2.png' && (className += ' slider-top_active');
+
+                        li(class=className)
+                            .slider-top__block-photo
+                                img.slider-top__pic(src=`assets/images/${work}` alt="")
+
+            .slider-desc.slider-desc_tablets
+                ul.slider-desc__list.slider-desc_tablets-list
+                    li.slider_desc__item
+                        .slider_desc__head Сайт школы онлайн образования
+                        .slider_desc__techno html , css, javascript
+                        .slider_desc__show
+                            a.slider-desc__link(href="#")
+                                i.fa.fa-link(aria-hidden="true")
+                                span Посмотреть сайт
+            .slider-bottom
+                .slider-bottom__list
+                    ul.slider-bottom__left
+                        each work in works
+                            -
+                                var className = 'slider-bottom__item';
+                                work === 'work-1.png' && (className += ' slider__left-active');
+
+                            li(class=className)
+                                .slider-bottom__block-photo
+                                    img.slider-bottom__pic.slider-bottom_left(src=`assets/images/${work}` alt="")
+
+                    ul.slider-bottom__right
+                        each work in works
+                            -
+                                var className = 'slider-bottom__item';
+                                work === 'work-3.png' && (className += ' slider__right-active');
+
+                            li(class=className)
+                                .slider-bottom__block-photo
+                                    img.slider-bottom__pic.slider-bottom_right(src=`assets/images/${work}` alt="")
+            .slider__buttons
+                .slider__prev
+                    a.slider__next-link(href="#")
+                        +icon('arrow_down')
+                .slider__next
+                    a.slider__prev-link(href="#")
+                        +icon('arrow_down')
+

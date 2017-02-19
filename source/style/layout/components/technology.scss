@@ -1,0 +1,49 @@
+
+.stack-list {
+  margin-left: 40px;
+
+  &__item {
+    margin-bottom: 25px;
+  }
+}
+.technology {
+
+  &__title {
+    font-family: 'robotomedium', sans-serif;
+    font-size: 28px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    margin: 8px 0 19px -38px;
+  }
+
+  &__item {
+    margin-left: 34px;
+    position: relative;
+  }
+
+  &__name {
+    @include centered(both);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'robotoregular', sans-serif;
+    font-size: 14px;
+    color: $green;
+    width: 60%;
+
+  }
+
+  .g-circles {
+    fill: none;
+    stroke-width: 20;
+    .sector {
+      transition: all 1s;
+    }
+  }
+}
+
+

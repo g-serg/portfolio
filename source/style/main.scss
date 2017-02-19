@@ -1,0 +1,19 @@
+//variables
+$black: #373e42;
+$green: #10c1a8;
+$lightGreen: #73d4c9;
+$container-width : 960;
+$heightFoot: 74px;
+
+// fonts+
+@import "layout/fontsawesome/font-awesome";
+@import "layout/sprite";
+@import "layout/fonts";
+
+// setups
+@import "layout/mixins";
+@import "layout/setups";
+
+// blocks
+@import "layout/components/**/*.scss";
+@import "blocks/**/*.scss";

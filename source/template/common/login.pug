@@ -1,0 +1,19 @@
+.login
+    .login__button
+        a.login__link(href="#") Авторизоваться
+    .user-wrap
+        .auth-user
+            +hero(init.hero, 'Личный сайт веб разработчика')
+            +socials()
+        ul.login-nav
+            li.login-nav__item.login-nav__link-br_lft
+                a(href="works.html").login-nav__link Мои работы
+            li.login-nav__item
+                a(href="about.html").login-nav__link Обо мне
+            li.login-nav__item.login-nav__link-br_rght
+                a(href="blog.html").login-nav__link Блог
+
+    footer.login__footer= init.copyRights
+
+    script(src="assets/js/foundation.js")
+    script(src="assets/js/main.js")

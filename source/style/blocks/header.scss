@@ -1,0 +1,64 @@
+
+.header {
+  @include cover;
+  display: flex;
+  min-height: 600px;
+  justify-content: center;
+  position: relative;
+  //height: 100vh;
+  overflow: hidden;
+}
+
+.header__bg {
+  @include absolute-center;
+  @include cover;
+  height: 1232px;
+
+  img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.header__icon-box {
+  @include absolute-center;
+  width: 86%;
+  color: rgba(#fff, .1);
+}
+
+.header__socials {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  z-index: 40;
+}
+
+.header__socials .socials {
+  margin-left: -10px;
+  position: relative;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    position: relative;
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 20px;
+    opacity: .6;
+    position: relative;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.icon-portfolio_header {
+  position: relative;
+  width: 100%;
+  font-size: 38.3961rem;
+}
+

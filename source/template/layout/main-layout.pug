@@ -1,0 +1,13 @@
+doctype html
+html(lang="ru-RU")
+    include components/*.pug
+    include ../common/head.pug
+    body
+        .wrapper
+            .maincontent
+                include ../common/header.pug
+                .container
+                    block content
+                    include ../common/block-about.pug
+        include ../common/footer.pug
+        script(src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript")

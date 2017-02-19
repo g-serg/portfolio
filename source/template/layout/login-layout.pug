@@ -1,0 +1,10 @@
+doctype html
+html(lang="ru-RU")
+    include components/*.pug
+    include ../common/head
+    body
+        .wrapper.wrapper-auth
+            .maincontent
+                .container-login
+                    block content
+                    include ../common/login

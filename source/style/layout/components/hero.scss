@@ -1,0 +1,34 @@
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__photo {
+  margin-top: 153px;
+  position: relative;
+}
+
+.hero__pic {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 140px;
+  height: 140px;
+}
+
+.hero__name {
+  position: relative;
+  font-family: 'robotomedium', sans-serif;
+  font-size: 26px;
+  margin-top: 26px;
+  background: url("../images/sprite.svg") no-repeat;
+
+}
+
+.hero__desc {
+  font-family: 'robotolight', sans-serif;
+  font-size: 16px;
+}

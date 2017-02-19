@@ -1,0 +1,46 @@
+.contacts {
+  background: #fff;
+  opacity: .8;
+  border-radius: 5px;
+}
+
+.contacts__list {
+  padding: 0 0 32px 0;
+  margin: 0 70px 0 40px;
+}
+
+.contacts__title {
+  position: relative;
+  width: 150px;
+  margin: 23px auto 18px;
+  font-size: 35px;
+  @include pseudo-lines(50%, -40px, -22px)
+}
+
+.contacts__item {
+  font-family: 'robotomedium', sans-serif;
+  font-size: 16px;
+  line-height: 45px;
+}
+
+.contacts__link {
+  color: $black;
+  vertical-align: middle;
+  transition: all .7s;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+.fa {
+  color: $green;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.icon-map_marker {
+  color: $green;
+  vertical-align: middle;
+  margin-right: 7px;
+}

@@ -1,0 +1,136 @@
+.login {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'robotomedium', sans-serif;
+  flex-direction: column;
+  background-image: url(../images/mountains.jpg);
+  background-position: top center;
+}
+
+.login__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px 40px 0 0;
+}
+
+.login__link {
+  color: #ffffff;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  line-height: 43px;
+  padding: 0 27px;
+  transition: all .8s;
+
+  &:hover {
+    background: #fff;
+    color: $green;
+  }
+}
+
+.user-wrap {
+  width: 380px;
+  height: 400px;
+  @include centered(both);
+}
+
+.auth-user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(#fff, .8);
+  border-radius: 5px 5px 0 0;
+  height: 352px;
+  min-width: 380px;
+
+  .hero {
+    position: relative;
+    color: $black;
+    margin: 0 50px;
+  }
+  .hero__photo {
+    position: relative;
+    margin-top: 40px;
+  }
+  .hero__name {
+    margin-top: 3px;
+  }
+}
+
+.auth-user .socials {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $lightGreen;
+  //margin-left: -19px;
+  margin-top: 72px;
+  margin-bottom: 35px;
+
+  &__item {
+    margin-left: 19px;
+  }
+
+  &__link {
+    color: inherit;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.login-nav {
+  position: relative;
+  display: flex;
+  color: #ffffff;
+  line-height: 45px;
+
+  &__item {
+    background: #08af9d;
+    transition: all .5s;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background: rgba(#088d85, .5);
+    }
+  }
+}
+
+.login-nav__link {
+  color: inherit;
+}
+
+.login-nav__link-br_rght {
+  border-radius: 0 0 5px 0;
+  border-left: 2px solid #73cac2;
+}
+
+.hero-nav__item {
+  border-left: none;
+}
+
+.login-nav__link-br_lft {
+  border-radius: 0 0 0 5px;
+  border-right: 2px solid #73cac2;
+}
+
+.login__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'robotolight';
+}
+

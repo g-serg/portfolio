@@ -1,0 +1,27 @@
+
+.nav-inline {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+  margin-left: -38px;
+
+  &__item {
+    margin-left: 39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__link {
+    font-family: 'robotomedium', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    transition: all .6s;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+}
+

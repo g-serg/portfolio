@@ -1,0 +1,134 @@
+
+.form-send {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../images/water.jpg") no-repeat center;
+    filter: blur(20px);
+    border-radius: 5px;
+  }
+
+  &__pic {
+    position: absolute;
+    filter: blur(20px);
+    height: 100%;
+  }
+
+  &__head {
+    position: relative;
+    font-family: 'bernier_regularregular', sans-serif;
+    font-size: 35px;
+    line-height: 41px;
+    color: $black;
+    @include pseudo-lines(46%, -40px, -40px);
+    margin: 32px 0;
+  }
+}
+
+.form-send__contact {
+  width: 340px;
+  position: relative;
+
+  &-input {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px 17px;
+    outline: none;
+    border: 1px solid transparent;
+
+    &:focus {
+      border: 1px solid $green;
+      border-radius: 5px;
+    }
+  }
+
+  &-text {
+    @extend .form-send__contact-input;
+    height: 140px;
+    resize: none;
+    margin-bottom: 15px;
+  }
+}
+
+.form-send__submit {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+
+  &-input {
+    width: 50%;
+    position: relative;
+    color: #ffffff;
+    background: #268c8c;
+    border: none;
+
+    cursor: pointer;
+    transition: all .5s;
+    height: 45px;
+
+    &:nth-child(1) {
+      border-radius: 0 0 0 5px;
+      border-right: 2px solid #82b7b9;
+    }
+
+    &:nth-child(2) {
+      border-radius: 0 0 5px 0;
+    }
+
+    &:hover {
+      background: #26bbaa;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.form__popup {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 40%;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: 'robotoregular', sans-serif;
+  line-height: 36px;
+  color: $black;
+  box-shadow: 1px 0px 13px 0px rgba(50, 50, 51, 0.62);
+  z-index: 50;
+
+  &-text {
+    margin: 12px 52px;
+  }
+
+  &-link {
+    display: block;
+    background: #00bfa5;
+    border-radius: 5px;
+    color: #fff;
+    transition: all .5s;
+    line-height: 40px;
+    padding: 0 18px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background: #009688;
+    }
+  }
+}
+

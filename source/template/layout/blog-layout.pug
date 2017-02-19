@@ -1,0 +1,12 @@
+doctype html
+html(lang="ru-RU")
+    include components/*.pug
+    include ../common/head.pug
+    body
+        .wrapper
+            .maincontent.blog-page
+                include ../common/header-blog.pug
+                .container
+                    block content
+                    include ../common/blog-content.pug
+        include ../common/footer.pug

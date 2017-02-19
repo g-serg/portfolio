@@ -1,0 +1,16 @@
+
+.triangles {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+}
+
+.triangles__item .left{
+  fill: #efeee9;
+}
+
+.triangles__item .right{
+  fill: #eeebdf;
+}

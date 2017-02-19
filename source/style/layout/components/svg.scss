@@ -1,0 +1,18 @@
+
+.icon {
+  &-vk {
+    height: 20px;
+    width: 30px;
+  }
+
+  &-in,
+  &-github{
+    height: 23px;
+  }
+
+  &-vk_round,
+  &-github_round,
+  &-in_round{
+    width: 36px;
+  }
+}

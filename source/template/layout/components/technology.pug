@@ -1,0 +1,41 @@
+mixin technology()
+    -
+        var r100 = 2.96;
+        var data = [
+            ['Frontend',[
+                ['HTML5', 90],
+                ['CSS3', 80],
+                ['JavaScript & JQuery', 80]
+            ]],
+            ['Backend',[
+                ['PHP', 40],
+                ['mySQL', 55],
+                ['Node.js & npm', 40],
+                ['Mongo.db', 65]
+            ]],
+            ['Workflow',[
+                ['GIT', 80],
+                ['GULP', 73],
+                ['Bower', 65]
+            ]]
+        ];
+
+    ul.stack-list
+        each tech in data
+            li.stack-list__item
+                .technology
+                    .technology__title= tech[0]
+                    ul.technology__list
+                        each lang in tech[1]
+                            li.technology__item
+                                .technology__name= lang[0]
+                                -
+                                    var stroke = r100*lang[1] + ' 296';
+                                    var opacity = lang[1] > 50 ? 1 : .4;
+                                svg.g-circles(width="114" height="114")
+                                    circle(r="45" cx="57" cy="57" stroke="#dfdcd5" fill="none")
+                                    circle(r="45" cx="57" cy="57" stroke="#10c1a8"
+                                        stroke-opacity=`${opacity}`
+                                        stroke-dasharray=`${stroke}`
+                                        transform="rotate(-90 57 57)"
+                                    ).sector

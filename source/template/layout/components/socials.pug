@@ -1,0 +1,15 @@
+mixin socials(suffix)
+    -
+        var list = [
+            ['vk',      '//vk.com'],
+            ['github',  '//github.com/g-serg'],
+            ['in',      '//www.linkedin.com'],
+        ];
+
+    ul.socials
+        each item in list
+            li.socials__item
+                a.socials__link(href=item[1] target="_blank")
+                    - var icon = item[0] + (suffix || '');
+                        +icon(icon)
+
