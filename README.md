@@ -1,4 +1,4 @@
-### portfolio Gorelov Sergey
+### portfolio g-serg
 
 #### Для начала работы
 
