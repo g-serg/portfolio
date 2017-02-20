@@ -3650,6 +3650,7 @@ footer {
   bottom: 0;
   overflow: hidden;
   background: #373e42;
+  width: 100%;
   opacity: .75; }
   .footer__top {
     position: relative;
