@@ -47,6 +47,7 @@ $.gulp.task('default', $.gulp.series(
     'check-for-favicon-update',
     'clean',
     'build',
+    'generate-favicon',
     'inject-favicon-markups',
     $.gulp.parallel(
         'watch',
