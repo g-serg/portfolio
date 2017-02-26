@@ -1,0 +1,30 @@
+mixin authorisation()
+    .login-user
+        .login-user__title Авторизуйтесь
+        .login-user__form
+            form.authorisation(action="#" method="post")
+                label.authorisation__btn(for="login")
+                    .authorisation__icon-box
+                        +icon('login')
+                    input.authorisation__login(type="text" id="login" placeholder="Логин")
+                label.authorisation__btn(for="password")
+                    .authorisation__icon-box
+                        +icon('password')
+                    input.authorisation__password(type="password" id="password" placeholder="Пароль")
+                .authorisation_check
+                    label.authorisation_check-form(for="check")
+                        input.authorisation_checkbox(type="checkbox" id="check" checked)
+                        .fake-check
+                        span.authorisation_check-text Я человек
+                .authorisation_radio
+                    .authorisation_radio-title Вы точно не робот?
+                    .radios
+                        label.authorisation_radio-box(for="yes")
+                            input(type="radio" id="yes" name="captch" checked).authorisation_radio-btn
+                            .fake-radio
+                            span.authorisation_radio-text Да
+                        label.authorisation_radio-box(for="no")
+                            input(type="radio" id="no" name="captch").authorisation_radio-btn
+                            .fake-radio
+                            span.authorisation_radio-text Не уверен
+
