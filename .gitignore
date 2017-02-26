@@ -39,3 +39,4 @@ node_modules
 npm-debug.log
 /source/style/layout/sprite.scss
 /source/images/sprite.svg
+/faviconData.json

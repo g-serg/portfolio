@@ -23,9 +23,12 @@ $.path.task.forEach(function(taskPath) {
     require(taskPath)();
 });
 
-$.gulp.task('light', $.gulp.parallel(
-    'sass',
-    'pug'
+$.gulp.task('light', $.gulp.series(
+    $.gulp.parallel(
+        'sass',
+        'pug'
+    ),
+    'inject-favicon-markups'
 ));
 
 $.gulp.task('build', $.gulp.parallel(
@@ -41,8 +44,10 @@ $.gulp.task('build', $.gulp.parallel(
 ));
 
 $.gulp.task('default', $.gulp.series(
+    'check-for-favicon-update',
     'clean',
     'build',
+    'inject-favicon-markups',
     $.gulp.parallel(
         'watch',
         'serve'
