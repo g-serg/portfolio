@@ -24,7 +24,7 @@
     border-radius: 2px;
     background: rgba(#fff, .5);
     margin-bottom: 10px;
-    transition: all .5s;
+    transition: all .1s;
   }
 
   &:hover {
@@ -34,4 +34,24 @@
   }
 }
 
+.menu-button__active {
+  .menu-button__line {
+    background: #ffffff;
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+      top: 13px;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 9px;
+    }
+  }
+}
 
