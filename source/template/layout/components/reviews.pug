@@ -1,4 +1,4 @@
-mixin reviews()
+mixin reviews(data)
     .reviews
         .works__head.reviews__head
             .works__title
@@ -6,23 +6,12 @@ mixin reviews()
             .works__bg
                 +icon('about_header')
         ul.reviews__content
-            li.reviews__item
-                img.reviews__decor(src="assets/images/symbol.png" alt="Отзывы")
-                p.reviews__text.
-                    Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-                     2 месяца только самых тяжелых испытаний и бессонных ночей!
-                .reviews__hero
-                    img.reviews__hero-photo(src="assets/images/koval.png" alt="Отзывы")
-                    .reviews__hero-text
-                        .reviews__hero-name Ковальчук Дмитрий
-                        .reviews__hero-post Основатель Loftschool
-            li.reviews__item
-                img.reviews__decor(src="assets/images/symbol.png" alt="Отзывы")
-                p.reviews__text.
-                    Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт
-                     на слишком старых браузерах!!
-                .reviews__hero
-                    img.reviews__hero-photo(src="assets/images/sab.png" alt="Отзывы")
-                    .reviews__hero-text
-                        .reviews__hero-name Сабанцев Владимир
-                        .reviews__hero-post Преподаватель
+            each item in data
+                li.reviews__item
+                    img.reviews__decor(src="assets/images/symbol.png" alt="Отзывы")
+                    p.reviews__text= item.text
+                    .reviews__hero
+                        img.reviews__hero-photo(src= item.photo alt="Отзывы")
+                        .reviews__hero-text
+                            .reviews__hero-name= item.name
+                            .reviews__hero-post= item.post

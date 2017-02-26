@@ -1,14 +1,6 @@
-mixin nav-inline()
-    -
-        var links = [
-            ['works.html', 'Мои работы'],
-            ['blog.html', 'Блог'],
-            ['about.html', 'Обо мне'],
-            ['index.html', 'Авторизация']
-        ];
-
+mixin nav-inline(data)
     ul.nav-inline
-        each link in links
+        each link in data
             li.nav-inline__item
                 a.nav-inline__link(href= link[0])= link[1]
 

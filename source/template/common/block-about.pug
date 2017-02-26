@@ -1,3 +1,6 @@
+-
+    var data = init.about;
+
 .content
     .content__left
         .about
@@ -10,16 +13,15 @@
             .about__desc
                 .about__me Кто я
                 .about__text
-                    p.about__text-desc= init.aboutMe1
-                    p.about__text-desc= init.aboutMe2
+                    each desc in data.desc
+                        p.about__text-desc= desc
     .content__right
         .stack
-            .stack__title Чем я могу быть вам полезен
-            .stack__decs
-                p= init.aboutMeLike
-            +technology()
+            .stack__title= data.stack.title
+            .stack__desc: p= data.stack.desc
+            +technology(init.technology)
 
 .map#map
     .map__content
         .map__menu
-            +contacts()
+            +contacts(init.contacts)

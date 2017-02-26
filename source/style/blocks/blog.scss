@@ -20,7 +20,7 @@
   }
 
   .hero__name {
-    @include pseudo-lines(50%,20px,20px);
+    @include pseudo-lines(50%, 20px, 20px);
     font-family: 'bernier_regularregular', sans-serif;
     font-size: 63px;
     margin-top: 7px;
@@ -46,7 +46,7 @@
   line-height: 26px;
   margin-top: 60px;
   margin-bottom: 175px;
-  
+
   @include tablets {
     margin-top: 40px;
   }
@@ -56,8 +56,8 @@
     width: 25%;
     text-align: right;
     transition: all .6s;
-	
-	@include tablets {
+
+    @include tablets {
       position: fixed;
       z-index: 100;
       color: #ffffff;
@@ -74,29 +74,78 @@
 
   &__sidebar {
     transition: all .6s;
-	
-	@include tablets {
+
+    @include tablets {
       overflow: hidden;
       background: #009688;
     }
   }
-  
+
   &__right {
     position: relative;
     margin-left: 89px;
     width: 60%;
     padding: 0 20px;
-	
-	@include tablets {
+
+    @include tablets {
       width: 90%;
       margin: 0;
     }
   }
 }
 
+.blog__sidebar-fixed {
+  position: fixed;
+  top: 0;
+  width: 25%;
+
+  @include tablets {
+    width: auto;
+    top: auto;
+  }
+}
+
+.blog__sidebar-fixed {
+  position: fixed;
+  top: 0;
+  width: 25%;
+
+  @include tablets {
+    width: auto;
+    top: auto;
+  }
+}
+
+.blog__btn {
+  display: none;
+
+  @include tablets {
+    display: block;
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    right: 20px;
+  }
+
+  &-link {
+    display: block;
+    background: #009688;
+    width: 40px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 5px;
+    z-index: 50;
+
+    &:hover {
+      background: $green;
+    }
+  }
+}
+
 .sidebar-blog {
   margin-left: 20px;
-  
+
   @include tablets {
     margin: 65px 0 65px 20px;
     width: 300px;
@@ -106,6 +155,20 @@
 .sidebar-blog__item {
   padding: 10px 20px;
   margin-bottom: 6px;
+}
+
+.sidebar-blog__active-link {
+  color: $green;
+  font-family: 'robotobold', sans-serif;
+  border-right: 3px solid $green;
+  box-sizing: border-box;
+  padding-right: 17px;
+
+  @include tablets {
+    color: #ffffff;
+    border-right: none;
+    text-decoration: underline;
+  }
 }
 
 .sidebar-blog__link {
@@ -121,16 +184,46 @@
   @include phones {
     margin-bottom: 100px;
   }
+
+  &__item {
+    margin-bottom: 40px;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background: #f1f1f2;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'bernier_regularregular', sans-serif;
+    font-size: 35px;
+    line-height: 41px;
+    width: 77%;
+    margin-bottom: 7px;
+  }
+
+  &__date {
+    font-family: 'robotoregular', sans-serif;
+    color: $green;
+    line-height: 41px;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    position: relative;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
 }
 
-.articles__item {
-  margin-bottom: 60px;
-}
-
-.articles__title {
-  font-family: 'bernier_regularregular', sans-serif;
-  font-size: 35px;
-  line-height: 41px;
-  width: 77%;
-  margin-bottom: 7px;
-}

@@ -3,12 +3,17 @@
         .blog__sidebar
             aside.sidebar-blog
                 ul.sidebar-blog__list
-                    li.sidebar-blog__item
-                        a.sidebar-blog__link(href="#sass"
-                        ) Самое важное в SASS
+                    each item in init.posts
+                        li.sidebar-blog__item
+                            a.sidebar-blog__link(href=`#${item.hash}`)= item.title
+        .blog__btn
+            a(href="#").blog__btn-link
 
     .blog__right
         ul.articles
-            li.articles__item#sass
-                article
-                    h2.articles__title Самое важное в SASS
+            each item in init.posts
+                li.articles__item(id= item.hash)
+                    article
+                        h2.articles__title= item.title
+                        .articles__date= item.date
+                        .articles__content!= item.text

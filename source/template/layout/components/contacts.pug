@@ -1,17 +1,17 @@
-mixin contacts()
+mixin contacts(data)
     .contacts
         .contacts__title.main-title Контакты
         ul.contacts__list
             li.contacts__item
                 i.fa.fa-skype.fa-2x(aria-hidden="true")
-                a.contacts__link(href="skype:")= init.skype
+                a.contacts__link(href="skype:")= data.skype
             li.contacts__item
                 i.fa.fa-envelope.fa-2x(aria-hidden="true")
-                a.contacts__link(href="mailto:")= init.mail
+                a.contacts__link(href="mailto:")= data.mail
             li.contacts__item
                 i.fa.fa-phone.fa-2x(aria-hidden="true")
-                a.contacts__link(href="tel:${init.mobileInner}")= init.mobile
+                a.contacts__link(href="tel:${data.mobileInner}")= data.mobile
             li.contacts__item
                 +icon('map_marker')
-                a.contacts__link(href="#")= init.address
+                a.contacts__link(href="#")= data.address
 
