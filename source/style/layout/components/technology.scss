@@ -2,6 +2,10 @@
 .stack-list {
   margin-left: 40px;
 
+  @include tablets {
+    margin-left: 0;
+  }
+
   &__item {
     margin-bottom: 25px;
   }
@@ -11,17 +15,63 @@
   &__title {
     font-family: 'robotomedium', sans-serif;
     font-size: 28px;
+
+
+    @include tablets {
+      font-size: 20px;
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
     align-items: flex-start;
     margin: 8px 0 19px -38px;
+
+    @include desktop {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include laptop {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include tablets {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    @include phones {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     margin-left: 34px;
     position: relative;
+
+    @include laptop {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      margin-left: 0;
+    }
+
+    @include  tablets {
+      margin-left: 37px;
+      width: auto;
+    }
+
+    @include phones {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      margin-left: 0;
+    }
   }
 
   &__name {

@@ -4,6 +4,18 @@ html, body {
   width: 100%;
   min-height: 100%;
   font-size: 16px;
+  
+  @include laptop {
+    font-size: 15px;
+  }
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
 }
 
 body {
@@ -90,5 +102,9 @@ footer {
 .main-title {
   font-family: 'bernier_regularregular', sans-serif;
   font-size: 63px;
+
+  @include tablets {
+    font-size: 49px;
+  }
 }
 

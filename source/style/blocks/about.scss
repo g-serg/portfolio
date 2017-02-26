@@ -2,18 +2,30 @@
 .content {
   position: relative;
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .content__left {
   width: 50%;
   background: #efeee9;
   position: relative;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .content__right {
   width: 50%;
   background: #eeebdf;
   position: relative;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 //left
@@ -24,6 +36,10 @@
   align-items: center;
   color: $black;
 
+  @include tablets {
+    margin-top: 22px;
+  }
+
   &__bg {
     position: absolute;
     top: -108px;
@@ -32,6 +48,10 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+
+    @include tablets {
+      width: 290px;
+    }
   }
   &__head {
     position: relative;
@@ -66,11 +86,28 @@
     height: auto;
     position: relative;
     margin-bottom: 22px;
+
+    @include tablets {
+      width: 470px;
+      margin-bottom: 40px;
+    }
+
+    @include phones {
+      width: 100%;
+    }
   }
 
   &__desc {
     width: 75%;
     margin-bottom: 38px;
+
+    @include tablets {
+      width: 56%;
+    }
+
+    @include phones {
+      width: 88%;
+    }
   }
 
   &__me {
@@ -82,6 +119,11 @@
     position: relative;
     margin-bottom: 25px;
 
+    @include tablets {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
     &:after {
       position: absolute;
       content: '';
@@ -91,6 +133,11 @@
       background: #cacbc8;
       top: 50%;
       left: 0;
+
+      @include tablets {
+        top: 47%;
+        left: 10px;
+      }
     }
 
     &:before {
@@ -102,6 +149,11 @@
       background: #cacbc8;
       top: 50%;
       right: 0;
+
+      @include tablets {
+        top: 47%;
+        right: 10px;
+      }
     }
   }
 
@@ -109,6 +161,10 @@
     font-family: 'robotoregular', sans-serif;
     font-size: 16px;
     line-height: 24px;
+
+    @include tablets {
+      font-size: 14px;
+    }
 
     &-desc {
       margin-bottom: 9px;
@@ -125,6 +181,10 @@
 //Right
 .stack {
   color: $black;
+
+  @include tablets {
+    margin-top: 40px;
+  }
 }
 
 .stack__title {
@@ -135,6 +195,11 @@
   width: 260px;
   margin: 10px auto 26px;
   text-align: center;
+
+  @include tablets {
+    font-size: 30px;
+    width: 230px;
+  }
 
   &:after {
     position: absolute;
@@ -161,9 +226,17 @@
 }
 
 .stack__decs {
-  margin: 0 39px 47px
-}
+  margin: 0 39px 47px;
 
+  @include tablets {
+    width: 55%;
+    font-size: 14px;
+  }
+
+  @include phones {
+    width: 90%;
+  }
+}
 
 //map
 .map {
@@ -174,6 +247,11 @@
   align-items: center;
   justify-content: center;
   min-height: 650px;
+  
+  @include phones {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
   &__content {
     display: flex;

@@ -6,16 +6,29 @@
 .slider {
   position: relative;  display: flex;
   min-height: 100vh;
+  
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .slider-desc {
   position: relative;  flex-basis: 50%;  display: flex;
   flex-direction: column;  align-items: center;  justify-content: center;
   background: #f0efe9;
+  
+  @include tablets {
+    display: none;
+  }
 }
 
 .slider-desc_tablets {
   display: none;
+  
+  @include tablets {
+    width: 100%;
+    display: flex;
+  }
 }
 
 .slider-desc_tablets-list {

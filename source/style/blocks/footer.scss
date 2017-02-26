@@ -12,6 +12,10 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #666c6e;
+	
+	@include tablets {
+	  flex-direction: column;
+	}
   }
 }
 
@@ -22,6 +26,11 @@
   padding-right: 30px;
   margin-right: -10px;
   height: $heightFoot;
+  
+  @include tablets {
+    justify-content: center;
+    padding-right: 0;
+  }
 
   &__item {
     margin-right: 10px;
@@ -51,6 +60,16 @@
   line-height: 24px;
   color: #ffffff;
   height: $heightFoot;
+  
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include phones {
+    height: auto;
+  }
 }
 
 .footer__about {
@@ -60,6 +79,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+  @include tablets {
+    width: 80%;
+    text-align: center;
+    flex-basis: 77%;
+    margin-top: 13px;
+    margin-bottom: 15px;
+  }
 }
 
 
@@ -69,4 +96,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+  @include tablets {
+    margin-bottom: -2px;
+  }
+
+  @include phones {
+    margin: 0;
+    text-align: center;
+  }
 }

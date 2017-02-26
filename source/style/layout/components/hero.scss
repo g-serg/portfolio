@@ -10,6 +10,10 @@
 .hero__photo {
   margin-top: 153px;
   position: relative;
+  
+  @include tablets {
+    margin-top: 115px;
+  }
 }
 
 .hero__pic {
