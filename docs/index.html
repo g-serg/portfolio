@@ -10,40 +10,101 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/main.css">
-  </head>
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff"></head>
   <body>
     <div class="wrapper wrapper-auth">
       <div class="maincontent">
         <div class="container-login">
           <div class="login">
             <div class="login__button"><a class="login__link" href="#">Авторизоваться</a></div>
-            <div class="user-wrap">
-              <div class="auth-user">
-                  <div class="hero">
-                    <div class="hero__photo"><img class="hero__pic" src="assets/images/hero.jpg" alt=""></div>
-                    <div class="hero__name">g-serg</div>
-                    <div class="hero__desc">Личный сайт веб разработчика</div>
+            <div class="login__wrap" id="flip-toggle">
+              <div class="flipper">
+                <div class="user-wrap">
+                  <div class="auth-user">
+                      <div class="hero">
+                        <div class="hero__photo"><img class="hero__pic" src="assets/images/hero.jpg" alt=""></div>
+                        <div class="hero__name">g-serg</div>
+                        <div class="hero__desc">Личный сайт веб разработчика</div>
+                      </div>
+                      <ul class="socials">
+                        <li class="socials__item"><a class="socials__link" href="//vk.com" target="_blank">
+                              <svg class="icon icon-vk">
+                                <use xlink:href="assets/images/sprite.svg#vk"/>
+                              </svg></a></li>
+                        <li class="socials__item"><a class="socials__link" href="//github.com/g-serg" target="_blank">
+                              <svg class="icon icon-github">
+                                <use xlink:href="assets/images/sprite.svg#github"/>
+                              </svg></a></li>
+                        <li class="socials__item"><a class="socials__link" href="//www.linkedin.com" target="_blank">
+                              <svg class="icon icon-in">
+                                <use xlink:href="assets/images/sprite.svg#in"/>
+                              </svg></a></li>
+                      </ul>
                   </div>
-                  <ul class="socials">
-                    <li class="socials__item"><a class="socials__link" href="//vk.com" target="_blank">
-                          <svg class="icon icon-vk">
-                            <use xlink:href="assets/images/sprite.svg#vk"></use>
-                          </svg></a></li>
-                    <li class="socials__item"><a class="socials__link" href="//github.com/g-serg" target="_blank">
-                          <svg class="icon icon-github">
-                            <use xlink:href="assets/images/sprite.svg#github"></use>
-                          </svg></a></li>
-                    <li class="socials__item"><a class="socials__link" href="//www.linkedin.com" target="_blank">
-                          <svg class="icon icon-in">
-                            <use xlink:href="assets/images/sprite.svg#in"></use>
-                          </svg></a></li>
+                  <ul class="login-nav">
+                    <li class="login-nav__item login-nav__link-br_lft"><a class="login-nav__link" href="works.html">Мои работы</a></li>
+                    <li class="login-nav__item"><a class="login-nav__link" href="about.html">Обо мне</a></li>
+                    <li class="login-nav__item login-nav__link-br_rght"><a class="login-nav__link" href="blog.html">Блог</a></li>
                   </ul>
+                </div>
+                <div class="authorisation-wrap">
+                  <div class="authorisation">
+                      <div class="login-user">
+                        <div class="login-user__title">Авторизуйтесь</div>
+                        <div class="login-user__form">
+                          <form class="authorisation" action="#" method="post">
+                            <label class="authorisation__btn" for="login">
+                              <div class="authorisation__icon-box">
+                                  <svg class="icon icon-login">
+                                    <use xlink:href="assets/images/sprite.svg#login"/>
+                                  </svg>
+                              </div>
+                              <input class="authorisation__login" type="text" id="login" placeholder="Логин">
+                            </label>
+                            <label class="authorisation__btn" for="password">
+                              <div class="authorisation__icon-box">
+                                  <svg class="icon icon-password">
+                                    <use xlink:href="assets/images/sprite.svg#password"/>
+                                  </svg>
+                              </div>
+                              <input class="authorisation__password" type="password" id="password" placeholder="Пароль">
+                            </label>
+                            <div class="authorisation_check">
+                              <label class="authorisation_check-form" for="check">
+                                <input class="authorisation_checkbox" type="checkbox" id="check" checked>
+                                <div class="fake-check"></div><span class="authorisation_check-text">Я человек</span>
+                              </label>
+                            </div>
+                            <div class="authorisation_radio">
+                              <div class="authorisation_radio-title">Вы точно не робот?</div>
+                              <div class="radios">
+                                <label class="authorisation_radio-box" for="yes">
+                                  <input class="authorisation_radio-btn" type="radio" id="yes" name="captch" checked>
+                                  <div class="fake-radio"></div><span class="authorisation_radio-text">Да</span>
+                                </label>
+                                <label class="authorisation_radio-box" for="no">
+                                  <input class="authorisation_radio-btn" type="radio" id="no" name="captch">
+                                  <div class="fake-radio"></div><span class="authorisation_radio-text">Не уверен</span>
+                                </label>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    <ul class="author-nav login-nav">
+                      <li class="author-nav__item login-nav__link-br_lft login-nav__item"><a class="login-nav__link" href="about.html">На главную</a></li>
+                      <li class="author-nav__item login-nav__link-br_rght login-nav__item"><a class="login-nav__link" href="#">Войти</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <ul class="login-nav">
-                <li class="login-nav__item login-nav__link-br_lft"><a class="login-nav__link" href="works.html">Мои работы</a></li>
-                <li class="login-nav__item"><a class="login-nav__link" href="about.html">Обо мне</a></li>
-                <li class="login-nav__item login-nav__link-br_rght"><a class="login-nav__link" href="blog.html">Блог</a></li>
-              </ul>
             </div>
             <footer class="login__footer">© g-serg | создано с любовью в LoftSchool | 2017</footer>
             <script src="assets/js/foundation.js"></script>
