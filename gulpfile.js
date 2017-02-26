@@ -28,19 +28,21 @@ $.gulp.task('light', $.gulp.parallel(
     'pug'
 ));
 
+$.gulp.task('build', $.gulp.parallel(
+    'sass',
+    'pug',
+    'js:foundation',
+    'js:process',
+    'sprite:svg',
+    'sprite:png',
+    'copy:image',
+    'copy:font',
+    'css:foundation'
+));
+
 $.gulp.task('default', $.gulp.series(
     'clean',
-    $.gulp.parallel(
-        'sass',
-        'pug',
-        'js:foundation',
-        'js:process',
-        'sprite:svg',
-        'sprite:png',
-        'copy:image',
-        'copy:font',
-        'css:foundation'
-    ),
+    'build',
     $.gulp.parallel(
         'watch',
         'serve'
