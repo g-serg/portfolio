@@ -8,9 +8,8 @@ module.exports = function() {
     $.gulp.task('generate-favicon', function(done) {
         $.gp.realFavicon.generateFavicon({
             masterPicture: './source/images/hero.jpg',
-            dest: $.config.root, //'./build',
-            //.pipe($.gulp.dest($.config.root))
-            iconsPath: '/',
+            dest: $.config.root,
+			iconsPath: '/portfolio',
             design: {
                 ios: {
                     pictureAspect: 'noChange',
